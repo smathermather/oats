@@ -61,7 +61,7 @@ run_test(){
 			-v $(pwd)/$output_dir:/dataset \
 			--entrypoint /bin/chown \
 			$DOCKER_IMAGE:$tag \
-			-R $(id -u):$(id -u) /dataset
+			/dataset
 	fi
 
 	# Save command output to log
